@@ -7,3 +7,4 @@ if x==10:
 # if=10
 print(type(x))
 # print(int)
+z = 0

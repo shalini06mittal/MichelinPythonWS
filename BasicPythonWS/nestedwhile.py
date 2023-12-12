@@ -18,21 +18,3 @@ for i in range(5):
         if i==j: break
         print(i,j)
 
-'''
-Print total amount for the tickets purchased
-Assume following conditions
-age<=5 free
-age >5 and <=15 150/-
-age > 15 250/-
-Ask the user to enter 
-1. name
-2. tickets for how many people
-3. for each person, age 
- print the total amount the customer needs to pay
-
-NESTED LOOP:
-Continue the above process for different customers,
-until admin enters exit
-and also print the total amount each customer has to pay.
-
-'''

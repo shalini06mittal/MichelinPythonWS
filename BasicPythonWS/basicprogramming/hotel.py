@@ -35,3 +35,4 @@ for i in range(1, floors+1):
     totaloccupied = totaloccupied + noofoccrooms
 print('Total rooms ',totalrooms)
 print('Total occupied rooms ',totaloccupied)
+

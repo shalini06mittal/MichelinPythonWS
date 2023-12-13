@@ -1,6 +1,7 @@
 '''
 immutable
 indexing
+https://realpython.com/python-and-operator/
 '''
 # \t -> tab key
 # sent = 'technology trends\nhello'
@@ -55,4 +56,68 @@ print('*'+text+'*')
 print('*'+text.lstrip()+'*')
 print('*'+text.rstrip()+'*')
 print('*'+text.strip()+'*')
+text = 'where there is will there is way'
+print(text.split())
+data ='shalini, 12312213,89,mumbai, india'
+print(data.split('i'))
 # color[0] = 'br' ->immutable
+
+print('123123'.isalnum())
+print('123123'.isalpha())
+print('123123'.isdecimal())
+print('123123'.isdigit())
+print('123123'.isspace())
+print()
+print('1231jahs23'.isalnum())
+print('jahdas asdasd'.isalpha())
+print('decimal','123123.67'.isdecimal())
+print('123123'.isdigit())
+print('  '.isspace())
+
+print('shalini'=='shalini')
+print('shalini'==' shalini')
+print(''.isspace())
+
+# '' '  ' None
+name = None
+c = None
+print(name ==c)
+if name:
+    print(1)
+else:
+    print(2)
+
+# operators in string
+print('\n========== OPERATORS ==============\n')
+print('Ms. '+'Shalini')
+# print('@'+2)# error
+print('@'*2)
+# print('@'*'2')
+
+#in -> membership operator
+print('_' in 'shalini_mittal')
+print('red' in 'rose is red and sky is blue')
+# not in
+print('_' not in 'shalini@mittal')
+print('red' not in 'rose is red and sky is blue')
+
+print(1 and 3)
+print(1 and None)
+print(None and 1)
+print(1 or '')
+print('' or 5)
+
+no = None
+if no:
+    print('hey')
+else:
+    print('bye')
+
+'''
+Take a sentence as input from the user and print the longest word
+
+'''
+words =['hello','welcome','beautiful','lovely','zebra']
+words =['asha','apples','ack','aura','anxiety']
+print(max(words))
+print(max(words, key=len))# basis or parameter on which to find the max

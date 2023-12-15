@@ -117,7 +117,18 @@ else:
 Take a sentence as input from the user and print the longest word
 
 '''
-words =['hello','welcome','beautiful','lovely','zebra']
-words =['asha','apples','ack','aura','anxiety']
-print(max(words))
+words =['hello','welcome','beautiful','lovelines','zebra']
+sortedwords = sorted(words, key=len, reverse=True)
+print(sortedwords)
+print(sortedwords[0])
+length = len(sortedwords[0])
+print('*****************')
+for word in sortedwords:
+    if len(word) != length:
+        break
+    print(word)
+# words =['asha','apples','ack','aura','anxiety']
+# words=['hello','my','family']
+words = 'hello world how are you'.split()
+print(max(words)) # defalt max searches on the asii value
 print(max(words, key=len))# basis or parameter on which to find the max

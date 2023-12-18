@@ -46,7 +46,27 @@ people = ['abc','xyz','abc','d','f','d','d','e']
 Create a dictionary by key as the name and value os the count for the name
 {'abc':2, 'xyz':1,'d':3,'f':1,'e':1}
 '''
-d1 = {(1,2):'One','Two':2}
-print(d1)
+# d1 = {(1,2):'One','Two':2}
+# print(d1)
+# people = ['abc','xyz','abc','d','f','d','d','e']
+# alphabet = dict.fromkeys(people, 0)
+# print("dict alphabet = ", alphabet)
+ 
+# for p in people:
+#     alphabet[p] = alphabet[p] + 1
+ 
+# print(alphabet)
+
+# people = ['abc','xyz','abc','d','f','d','d','e']
+# users = set(people)
+# dict_loggersCounts = dict.fromkeys(users,0)
+# for k,v in dict_loggersCounts.items():
+#     dict_loggersCounts[k] = people.count(k)
+ 
+# print(dict_loggersCounts)
+
+
+print(chr(101))
+print('hello'.replace(chr(101),'b'))
 
 

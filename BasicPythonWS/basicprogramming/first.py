@@ -2,7 +2,8 @@ print('hello')
 # variables
 x = 100
 y = 20
-sum = x+y
+a,b = 1,2
+sum = x+y *2
 print(x+y)
 print(sum)
 # 10+20=30

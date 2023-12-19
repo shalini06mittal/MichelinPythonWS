@@ -47,9 +47,12 @@ c['decr']()
 print(c['count']())
 
 
+# c =0
+# def incr():
+#     pass
 
 def counter():
-    count = 0
+    count = 0 # data hiding
     def incr():
         nonlocal count # special keyword used with nested functions
         count+=1
@@ -79,6 +82,9 @@ def x1():
         return x3
     def x4():
         print('x4')
-    return x4
+    return x4, x2
 # x1()()()
-x1()
+print(x1())
+t1 = x1()
+print(t1[0]())
+print(t1[1]()())

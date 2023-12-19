@@ -46,3 +46,39 @@ print(c['count']())
 c['decr']()
 print(c['count']())
 
+
+
+def counter():
+    count = 0
+    def incr():
+        nonlocal count # special keyword used with nested functions
+        count+=1
+        return count
+    def decr():
+        nonlocal count
+        count-=1
+        return count
+    return {'incr':incr, 'decr':decr}
+
+c = counter()
+# # print(c)
+# print(c['incr']())
+# print(c['incr']())
+# print(c['incr']())
+# print(c['incr']())
+# print(c['decr']())
+
+
+def x1():
+    m = 100
+    def x2():
+        def x3():
+            nonlocal m
+            m=20
+            print(m)
+        return x3
+    def x4():
+        print('x4')
+    return x4
+# x1()()()
+x1()

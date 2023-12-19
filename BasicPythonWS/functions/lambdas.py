@@ -19,6 +19,7 @@ names = ['Shalini Mittal','Ajay Gupta','Manas Sharma','Joe Austin','Ria Sana']
 # bubble sort
 for i in range(len(names)-1):
     for j in range(len(names)-1):
+        print(names[j])
         if len(names[j]) > len(names[j+1]):
             temp = names[j]
             names[j] = names[j+1]
@@ -63,3 +64,7 @@ list_1.sort(key = lambda no: no%10)
 # print(list_1)
 
 
+players = [('p1',90),('p2',89),('p3',93),('p4',80),('p5',70),('p6',50)]
+# sort on scores of every player
+players.sort(key = lambda player : player[1])
+print(players)

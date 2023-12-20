@@ -18,3 +18,7 @@ f1.close()
 
 # print(data.splitlines())
 
+# it also closes the file automatically
+with open('test.txt') as file:
+     print(file.readlines())
+

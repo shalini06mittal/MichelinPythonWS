@@ -15,5 +15,5 @@ def calculate(nos, func:function|None):# nos=[1,2,3,4,5], func = squares
 def cube(no):
     return no*no*no
 
-calculate([1,2,3,4,5], squares)
+calculate([1,2,3,4,5], lambda x:x*x)
 calculate([1,2,3,4,5], cube)

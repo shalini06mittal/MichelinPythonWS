@@ -27,3 +27,6 @@ display(1,2,3,4,5,name='shalini', city='Mumbai')
 d1 = {'name':'Mr.X', 'email':'x@g.com'}
 for d, v in d1.items():
     print(d, v)    
+
+from func import looseMessage
+looseMessage()

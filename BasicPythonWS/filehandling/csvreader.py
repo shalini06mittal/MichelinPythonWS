@@ -13,3 +13,4 @@ for product in freader:
         print(prod, end=' ')
     print()
 f1.close()
+

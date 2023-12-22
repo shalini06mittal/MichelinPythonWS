@@ -12,11 +12,13 @@ app.add_middleware(
     allow_headers=["*"], 
 )
 
+# database managed entity
 class Item(BaseModel):
     name: str
     description: Optional[str] = None
     price: float
     tax: Optional[float] = None
+
 @app.get("/") 
 def root(): 
 	return {"message": "Hello World"}
@@ -35,6 +37,7 @@ def root(username:str):
 
 @app.post("/items/")
 def create_item(item: Item):
+    print('to insert item in database')
     return item
 
 fake_items_db = [{"item_name": "Foo"}, 
@@ -47,7 +50,6 @@ fake_items_db = [{"item_name": "Foo"},
                  {"item_name": "Tee"},
                  {"item_name": "Rop"},
                  {"item_name": "Baa"}]
-
 
 @app.get("/items/")
 async def read_item(skip: int = 0, limit: int = 10):

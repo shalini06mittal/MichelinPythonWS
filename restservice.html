@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Consume Rest</title>
+        <style>
+            #topic{
+                background-color: antiquewhite;
+                color: brown;
+                padding: 10px;   
+            }
+        </style>
+    </head>
+    <body>
+        <div id ='emps'>Profile : </div>
+        <form method="post"></form>
+        <p id= 'title'>Response here : </p>
+        <input type='text' id='username' value="shalini" />
+        <button onclick="getUserprofile()">Get Profile</button>
+        <script>
+            function getUserprofile()
+            {
+                var username = document.getElementById('username').value;
+                console.log('username', username);
+              var xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log('success')
+                    console.log(typeof(this.responseText))
+                    console.log(this.responseText)
+                    var data = JSON.parse(this.responseText);
+                     console.log(data[)
+                //  document.getElementById("emps").innerHTML = JSON.stringify(data)
+                    document.getElementById("title").innerHTML = "<h1> City "+data.city+"</h1>"
+
+                }
+                  else{
+                      console.log('error')
+                      console.log(this.status)
+                      console.log(this.responseText)
+                  }
+              };
+                var data = {
+                        "pid": 5,
+                        "pname": "Harry Potter",
+                        "price": 822
+                    }
+                //console.log(data.pname)
+            xhttp.open("GET", "http://127.0.0.1:8000/profile/"+username, true);
+            xhttp.setRequestHeader("Accept","application/json");
+             // xhttp.send(JSON.stringify(data));
+                xhttp.send();
+                
+            }
+        </script>
+    </body>
+    
+</html>
